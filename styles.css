@@ -121,7 +121,7 @@ img {
     font-family: Arial, sans-serif;
     background-image: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url(Images/Food.jpeg);
+        url(Food.jpeg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -132,7 +132,7 @@ img {
     font-family: Arial, sans-serif;
     background-image: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url(Images/menu.jpeg);
+        url(menu.jpeg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
