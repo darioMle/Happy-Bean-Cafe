@@ -1,0 +1,364 @@
+/*Main elements*/
+
+h1{
+    font-family: Comic-Sans;
+    color: white;
+    text-align: center;
+    font-size: 38pt
+}
+
+h2{
+    font-family: Comic-Sans;
+    color: #013220;
+    margin-left: 30px;
+    font-size: 20pt
+}
+
+h3{
+    font-family: Comic-Sans;
+    color: #013220;
+    font-size: 24pt;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #013220;
+}
+
+p{
+    font-family: Comic-Sans;
+    color: white;
+    text-align: center;
+    font-size: 13pt
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: flex;
+    justify-self: center
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto;
+    background-color: #013220 ;
+
+    
+    width: 100%;
+    height: 67px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+footer p{
+    color: white;
+    font-family: Arial;
+    font-size: 9pt
+}
+
+
+a{
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.green{
+    color: #4CAF50;
+    text-align: left
+}
+
+.box{
+    margin-bottom: 0
+}
+.button{
+    border-radius: 20px;
+    height: 70px;
+    width: 420px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    background-color: #6B4F3A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center
+}
+
+.button p{
+    color: white;
+}
+
+
+/*Classes*/
+
+.photo-frame {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #654321;
+    border-radius: 20px;
+    width: 420px;
+    height: 320px
+    }
+
+
+
+/*ID's*/
+
+#home{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url(Images/Food.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#menu{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url(Images/menu.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#special_p{
+    font-family: Comic-Sans;
+    color: white;
+    text-align: center;
+    font-size: 20pt
+}
+
+/*Nav Part */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #013220 ;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    margin-right: 50px
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    font-family: Comic-Sans;
+    color: white;
+    transition: color 0.3s;
+}
+
+
+/*Hovers*/
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+.button p:hover {
+    color: #4CAF50;
+}
+
+
+
+
+
+
+/*menu boxes*/
+
+.accordion { width: 700px; margin: 0 auto; }
+
+
+.item {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+
+.item > input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.item label {
+  display: flex;
+  align-items: center;       
+  cursor: pointer;
+  height: 60px;              
+  padding: 0 30px;           
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+
+.item label p {
+  margin: 0;
+  font-size: 28px;
+  color: #013220;
+  margin-left: 36px;         
+  line-height: 1;
+  text-decoration-color: #013220;
+}
+
+.accordion .content h3 {
+    color: #013220;                 
+    text-decoration: underline;
+    text-decoration-color: #013220;               
+}
+
+
+
+.item label::before {
+  content: "";
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.28s cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+
+
+.item .content {
+  box-sizing: border-box;
+  max-height: 0;                     
+  overflow: hidden;                  
+  padding: 0 30px;                   
+  opacity: 0;
+  text-decoration-color: #013220;
+  transition: max-height 0.45s ease, opacity 0.28s ease, padding 0.28s ease;
+}
+
+
+.item .content > * { margin: 0 0 12px 0; color: #013220; }
+
+
+.item input:checked ~ label::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+
+.item input:checked ~ .content {
+  max-height: 2000px;                
+  opacity: 1;
+  padding: 20px 30px;                
+  overflow: auto;                    
+}
+
+
+
+
+
+
+
+
+/*FORM PART*/
+
+
+.formcarry-container {
+  width: 60%;
+  max-width: 600px;
+  margin: 4vh auto 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.35);
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formcarry-form {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.formcarry-form label {
+  display: block;
+  padding: 10px 0 6px 0;
+  font-family: Comic-Sans;
+  color: #013220;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.formcarry-form input,
+.formcarry-form textarea {
+  font-size: 17px;
+  width: 95%; 
+  padding: 14px;
+  background-color: #fdfdfd;
+  border: 3px solid #013220;
+  border-radius: 14px;
+  color: #013220;
+  font-family: Arial;
+  transition: 0.25s ease;
+
+  margin: 0 auto; 
+  display: block;
+}
+
+.formcarry-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.formcarry-form button {
+  margin-top: 22px;
+  width: 95%; 
+  padding: 16px;
+  border-radius: 14px;
+  background-color: #6B4F3A;
+  color: white;
+  font-family: Comic-Sans;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.formcarry-form button:hover {
+  background-color: #4CAF50;
+  transform: scale(1.04);
+}
