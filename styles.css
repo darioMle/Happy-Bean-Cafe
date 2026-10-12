@@ -30,15 +30,6 @@ p{
     font-size: 13pt
 }
 
-a{
-    text-decoration: none;
-}
-
-img{
-    display: flex;
-    justify-self: center
-}
-
 body{
     min-height: 100vh;
     display: flex;
@@ -101,19 +92,6 @@ img {
 
 /*Classes*/
 
-.photo-frame {
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #654321;
-    border-radius: 20px;
-    width: 420px;
-    height: 320px
-    }
-
-
-
 /*ID's*/
 
 #home{
@@ -136,13 +114,6 @@ img {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-
-#special_p{
-    font-family: Comic-Sans;
-    color: white;
-    text-align: center;
-    font-size: 20pt
 }
 
 /*Nav Part */
@@ -361,4 +332,110 @@ img {
 .formcarry-form button:hover {
   background-color: #4CAF50;
   transform: scale(1.04);
+}
+
+@media (max-width: 720px) {
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    padding: 0 16px;
+  }
+
+  .button {
+    width: min(420px, calc(100% - 32px));
+    box-sizing: border-box;
+  }
+
+  #home > img {
+    max-width: calc(100% - 32px);
+    height: auto;
+  }
+
+  #home,
+  #menu {
+    background-attachment: scroll;
+  }
+
+  .accordion {
+    width: calc(100% - 32px);
+    max-width: 700px;
+    box-sizing: border-box;
+  }
+
+  .formcarry-container {
+    width: calc(100% - 32px);
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: min(250px, calc(100vw - 32px));
+    height: auto;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .accordion .item label {
+    min-height: 60px;
+    height: auto;
+    padding: 12px 16px 12px 48px;
+  }
+
+  .item label p {
+    margin-left: 0;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .item .content,
+  .item input:checked ~ .content {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .item .content h2 {
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  .formcarry-container {
+    padding: 20px;
+  }
+
+  .formcarry-form {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .formcarry-form input,
+  .formcarry-form textarea,
+  .formcarry-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+
+  footer p {
+    margin: 4px 0;
+  }
 }
