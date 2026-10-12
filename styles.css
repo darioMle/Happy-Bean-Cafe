@@ -39,11 +39,8 @@ body{
 footer{
     margin-top: auto;
     background-color: #013220 ;
-
-    
     width: 100%;
     height: 67px;
-    
     display: flex;
     justify-content: space-around;
     align-items: center
@@ -54,7 +51,6 @@ footer p{
     font-family: Arial;
     font-size: 9pt
 }
-
 
 a{
     text-decoration: none;
@@ -97,7 +93,7 @@ img {
 #home{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url(Food.jpeg);
     background-size: cover;
@@ -108,7 +104,7 @@ img {
 #menu{
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url(menu.jpeg);
     background-size: cover;
@@ -154,10 +150,6 @@ img {
 }
 
 
-
-
-
-
 /*menu boxes*/
 
 .accordion { width: 700px; margin: 0 auto; }
@@ -184,10 +176,10 @@ img {
 
 .item label {
   display: flex;
-  align-items: center;       
+  align-items: center;
   cursor: pointer;
-  height: 60px;              
-  padding: 0 30px;           
+  height: 60px;
+  padding: 0 30px;
   position: relative;
   user-select: none;
   box-sizing: border-box;
@@ -198,17 +190,16 @@ img {
   margin: 0;
   font-size: 28px;
   color: #013220;
-  margin-left: 36px;         
+  margin-left: 36px;
   line-height: 1;
   text-decoration-color: #013220;
 }
 
 .accordion .content h3 {
-    color: #013220;                 
+    color: #013220;
     text-decoration: underline;
-    text-decoration-color: #013220;               
+    text-decoration-color: #013220;
 }
-
 
 
 .item label::before {
@@ -227,9 +218,9 @@ img {
 
 .item .content {
   box-sizing: border-box;
-  max-height: 0;                     
-  overflow: hidden;                  
-  padding: 0 30px;                   
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 30px;
   opacity: 0;
   text-decoration-color: #013220;
   transition: max-height 0.45s ease, opacity 0.28s ease, padding 0.28s ease;
@@ -245,17 +236,11 @@ img {
 
 
 .item input:checked ~ .content {
-  max-height: 2000px;                
+  max-height: 2000px;
   opacity: 1;
-  padding: 20px 30px;                
-  overflow: auto;                    
+  padding: 20px 30px;
+  overflow: auto;
 }
-
-
-
-
-
-
 
 
 /*FORM PART*/
@@ -295,7 +280,7 @@ img {
 .formcarry-form input,
 .formcarry-form textarea {
   font-size: 17px;
-  width: 95%; 
+  width: 95%;
   padding: 14px;
   background-color: #fdfdfd;
   border: 3px solid #013220;
@@ -304,7 +289,7 @@ img {
   font-family: Arial;
   transition: 0.25s ease;
 
-  margin: 0 auto; 
+  margin: 0 auto;
   display: block;
 }
 
@@ -315,7 +300,7 @@ img {
 
 .formcarry-form button {
   margin-top: 22px;
-  width: 95%; 
+  width: 95%;
   padding: 16px;
   border-radius: 14px;
   background-color: #6B4F3A;
@@ -367,25 +352,36 @@ img {
     box-sizing: border-box;
     padding: 28px;
   }
-}
 
-@media (max-width: 600px) {
+  .box {
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+
   .navbar {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
   }
 
-  .logo img {
-    width: min(250px, calc(100vw - 32px));
-    height: auto;
+  #home > br,
+  #menu > br,
+  #home .box br,
+  #menu .box br {
+    display: none;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.75em;
+    gap: 0.5em 0.75em;
     margin: 0;
     padding: 0;
+  }
+
+  .logo img {
+    width: min(250px, calc(100vw - 32px));
+    height: auto;
   }
 
   .accordion .item label {
@@ -411,6 +407,11 @@ img {
     font-size: 18px;
   }
 
+  .item input:checked ~ .content {
+    max-height: 6000px;
+    overflow: visible;
+  }
+
   .formcarry-container {
     padding: 20px;
   }
@@ -428,14 +429,26 @@ img {
   }
 
   footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     height: auto;
-    flex-direction: column;
-    gap: 4px;
+    gap: 8px 12px;
     padding: 12px 16px;
     box-sizing: border-box;
   }
 
   footer p {
     margin: 4px 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-links {
+    gap: 0.25em 0.5em;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
   }
 }
