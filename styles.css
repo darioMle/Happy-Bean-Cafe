@@ -52,6 +52,11 @@ footer p{
     font-size: 9pt
 }
 
+footer a,
+footer a:visited {
+    color: white;
+}
+
 a{
     text-decoration: none;
 }
@@ -328,6 +333,32 @@ img {
   .button {
     width: min(420px, calc(100% - 32px));
     box-sizing: border-box;
+    margin-inline: auto;
+  }
+
+  #home:not(.contact-page) h1 {
+    margin: 36px 0 20px;
+  }
+
+  #home:not(.contact-page) .box {
+    margin-bottom: 32px;
+  }
+
+  #home:not(.contact-page) > a {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  #home:not(.contact-page) > img {
+    margin-bottom: 12px;
+  }
+
+  #home:not(.contact-page) > p {
+    margin: 0 20px 32px;
+  }
+
+  .contact-page .formcarry-container {
+    margin-bottom: 28px;
   }
 
   #home > img {
